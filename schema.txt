@@ -1,1 +1,35 @@
+user:
+    *user_name
+    password
+    email&
+    shipping&
+    as_owner (bool)
 
+book:
+    *book_name:
+    *author_name:
+    genre
+    ISBN
+    prices
+    cost
+
+publisher:
+    name
+    email&
+    phone#
+    bank account
+
+bookstore:
+    time
+    genre
+    author
+    sales
+    expenditures
+
+
+order:
+    *order_id
+    *user_name
+    *book_name
+    quantity
+    price
