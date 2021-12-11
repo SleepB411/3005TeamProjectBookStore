@@ -14,15 +14,15 @@ book:
     cost
 
 publisher:
-    name
+    *name
     email&
     phone#
     bank account
 
-bookstore:
-    time
-    genre
-    author
+report:
+    *time
+    *genre
+    *author
     sales
     expenditures
 
@@ -31,5 +31,12 @@ order:
     *order_id
     *user_name
     *book_name
+    shipping_id
     quantity
     price
+    cost
+    
+shipping
+    *shipping_id
+    shipping_status
+    
