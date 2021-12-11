@@ -1,42 +1,55 @@
 user:
     *user_name
     password
-    email&
-    shipping&
-    as_owner (bool)
-
+    email
+	payment
+	billing_address
+    shipping_address
+    is_owner
+	
+buys:
+	*user_name
+	*Id
+	date
+	quantity
+	
 book:
-    *book_name:
-    *author_name:
+	*Id
+    book_name:
+    author_name:
+	publisher_name;
     genre
     ISBN
     prices
     cost
+	sales_percentage
+	in_stock
 
 publisher:
-    *name
-    email&
-    phone#
-    bank account
+    *publisher_name
+	address
+    email
+    phone_number
+    bank_account
 
 report:
-    *time
+    *date
     *genre
     *author
     sales
     expenditures
 
 
-order:
+user_order:
     *order_id
-    *user_name
-    *book_name
-    shipping_id
-    quantity
-    price
-    cost
-    
-shipping
-    *shipping_id
-    shipping_status
+    user_name
+    order_status
+	shipping_address
+	
+book_order:
+	*order_id
+	id
+	publisher_name
+	quantity
+	
     
