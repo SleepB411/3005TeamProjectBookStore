@@ -5,7 +5,9 @@ user:
 	payment
 	billing_address
 	shipping_address
-	is_owner
+	
+Owner:
+	*user_name
 	
 buys:
 	*user_name
