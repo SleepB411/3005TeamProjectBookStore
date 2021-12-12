@@ -49,11 +49,4 @@ user_order:
 	expected_date
 	current_location
 	
-	
-book_order:
-	*order_id
-	id
-	publisher_name
-	quantity
-	
     
