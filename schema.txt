@@ -22,7 +22,7 @@ book:
 	publisher_name;
 	genre
 	ISBN
-	prices
+	price
 	cost
 	sales_percentage
 	in_stock
