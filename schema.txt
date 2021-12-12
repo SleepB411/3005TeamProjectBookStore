@@ -46,7 +46,7 @@ user_order:
     	*order_id
     	user_name
     	order_status
-	shipping_address
+	
 	
 book_order:
 	*order_id
