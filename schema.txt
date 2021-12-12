@@ -45,7 +45,9 @@ report:
 user_order:
 	*order_id
 	user_name
-	order_status
+	order_date
+	expected_date
+	current_place
 	
 	
 book_order:
