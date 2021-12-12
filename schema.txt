@@ -20,32 +20,32 @@ book:
 	book_name:
 	author_name:
 	publisher_name;
-    	genre
-    	ISBN
-    	prices
-    	cost
+    genre
+    ISBN
+    prices
+    cost
 	sales_percentage
 	in_stock
 
 publisher:
 	*publisher_name
 	address
-    	email
-    	phone_number
-    	bank_account
+    email
+    phone_number
+    bank_account
 
 report:
-    	*date
-    	*genre
-    	*author
-    	sales
-    	expenditures
+    *date
+    *genre
+    *author
+    sales
+    expenditures
 
 
 user_order:
-    	*order_id
-    	user_name
-    	order_status
+    *order_id
+    user_name
+    order_status
 	
 	
 book_order:
