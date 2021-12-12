@@ -47,7 +47,7 @@ user_order:
 	user_name
 	order_date
 	expected_date
-	current_place
+	current_location
 	
 	
 book_order:
