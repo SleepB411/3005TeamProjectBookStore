@@ -60,6 +60,8 @@ create table report
 create table user_order
 	(order_id			SERIAL PRIMARY KEY,
 	 user_name		  	varchar(15),
+	 Id					int NOT NULL references book,
+	 quantity			numeric(4,0),
 	 order_date			DATE,
 	 expected_date		DATE,
 	 current_location   varchar(35),
@@ -89,16 +91,5 @@ create table manage
 
 	 primary key (user_name,Id),
 	 foreign key (user_name) references owner
-	 		on delete cascade
-	);
-
-create table buys
-	(user_name			varchar(15),
-	 Id					int NOT NULL references book,
-	 date				DATE,
-	 quantity			numeric(4,0),
-	 
-	 primary key (user_name,Id),
-	 foreign key (user_name) references customer
 	 		on delete cascade
 	);
