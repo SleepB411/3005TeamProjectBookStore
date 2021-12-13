@@ -6,7 +6,7 @@ delete from user_order;
 delete from publisher;
 delete from access;
 delete from manage;
-delete from buys;
+
 ALTER SEQUENCE book_Id_seq RESTART WITH 1;
 ALTER SEQUENCE user_order_order_id_seq RESTART WITH 1;
 
