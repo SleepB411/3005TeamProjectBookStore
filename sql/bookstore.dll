@@ -19,6 +19,16 @@ create table customer
 
 	 primary key (user_name)
 	);
+	
+	create table publisher
+	(publisher_name		varchar(25),
+	 address			varchar(35),
+	 email				varchar(25),
+	 phone_number		varchar(15),
+	 bank_account		varchar(16),
+	 
+	 primary key (publisher_name)
+	);
 
 create table book
 	(Id		  			SERIAL PRIMARY KEY,
@@ -33,7 +43,8 @@ create table book
 	 in_stock			numeric(4,0),
 	 
 	 foreign key (publisher_name) references publisher
-	 		on delete set null
+	 		on delete cascade,
+	 CONSTRAINT name_author UNIQUE (book_name,author_name)
 	);
 
 create table report
@@ -54,18 +65,10 @@ create table user_order
 	 current_location   varchar(35),
 
 	 foreign key (user_name) references customer
-	 		on delete set null
+	 		on delete cascade
 	);
 
-create table publisher
-	(publisher_name		varchar(25),
-	 address			varchar(35),
-	 email				varchar(25),
-	 phone_number		varchar(15),
-	 bank_account		varchar(16),
-	 
-	 primary key (publisher_name)
-	);
+
 
 create table access
 	(user_name			varchar(15),
@@ -75,9 +78,9 @@ create table access
 	 
 	 primary key (user_name,date,genre,author_name),
 	 foreign key (user_name) references owner
-	 		on delete set null,
+	 		on delete cascade,
 	 foreign key (date,genre,author_name) references report 
-	 		on delete set null
+	 		on delete cascade
 	);
 
 create table manage
@@ -86,7 +89,7 @@ create table manage
 
 	 primary key (user_name,Id),
 	 foreign key (user_name) references owner
-	 		on delete set null,
+	 		on delete cascade
 	);
 
 create table buys
@@ -97,5 +100,5 @@ create table buys
 	 
 	 primary key (user_name,Id),
 	 foreign key (user_name) references customer
-	 		on delete set null,
+	 		on delete cascade
 	);
