@@ -39,7 +39,6 @@ report:
 user_order:
 	*order_id
 	book_Id
-	date
 	quantity
 	user_name
 	order_date
