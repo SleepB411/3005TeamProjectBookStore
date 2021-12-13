@@ -8,12 +8,6 @@ user:
 	
 Owner:
 	*user_name
-	
-buys:
-	*user_name
-	*Id
-	date
-	quantity
 
 book:
 	*Id
@@ -44,9 +38,13 @@ report:
 
 user_order:
 	*order_id
+	book_Id
+	date
+	quantity
 	user_name
 	order_date
 	expected_date
 	current_location
+	
 	
     
