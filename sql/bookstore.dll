@@ -77,7 +77,7 @@ create table user_order
 
 create table access
 	(user_name			varchar(15),
-	 date		  		timestampstamp,
+	 date		  		timestamp,
 	 genre				varchar(15),
 	 author_name		varchar(25),
 	 
