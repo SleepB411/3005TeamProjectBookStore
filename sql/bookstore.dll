@@ -51,7 +51,7 @@ create table book
 	);
 
 create table report
-	(date		  		time,
+	(date		  		timestamp,
 	 genre				varchar(15),
 	 author_name		varchar(25),
 	 sales    			numeric(8,2),
@@ -65,8 +65,8 @@ create table user_order
 	 user_name		  	varchar(15),
 	 Id					int NOT NULL references book,
 	 quantity			numeric(4,0),
-	 order_date			time,
-	 expected_date		time,
+	 order_date			timestamp,
+	 expected_date		timestamp,
 	 current_location   varchar(35),
 
 	 foreign key (user_name) references customer
@@ -77,7 +77,7 @@ create table user_order
 
 create table access
 	(user_name			varchar(15),
-	 date		  		time,
+	 date		  		timestampstamp,
 	 genre				varchar(15),
 	 author_name		varchar(25),
 	 
