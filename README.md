@@ -13,15 +13,15 @@ Download 3005TeamProject or .zip file and unzip it, in the 3005TeamProject direc
 
 modify the nodemon.json file:
 change this
-{
-	"env": {
-        "user": "postgres",
-        "host": "localhost",
-        "database": "bookstore",
-        "password": "password",
-        "port": 5432
-	}
-}
+> {
+>	"env": {
+>        "user": "postgres",
+>        "host": "localhost",
+>        "database": "bookstore",
+>        "password": "password",
+>        "port": 5432
+>	}
+> }
 to this form:
 {
 	"env": {
