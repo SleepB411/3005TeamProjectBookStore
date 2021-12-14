@@ -19,8 +19,8 @@ insert into owner values ('tianchengqin','123456','tcq@qtc.com','123214124124','
 insert into owner values ('zzf','123456','zfz@zzf.com','1232141264654','1037 zl E','1037 zl E');
 insert into customer values ('qtc','123456','qtc@qtc.com','1232145435124','1037 zl E','1037 zl E');
 insert into customer values ('zifanzhu','123456','zzf@zfz.com','123426345124124','1034 zl E','1034 zl E');
-insert into book(book_name,author_name,publisher_name,genre,ISBN,price,cost,sales_percentage,in_stock) values ('???','zzf','aaa','sci','djaosdj312',18.88,8.88,0.25,188);
-insert into book(book_name,author_name,publisher_name,genre,ISBN,price,cost,sales_percentage,in_stock) values ('You Yong','zzf','bbb','sci','djaosdj322',18.99,8.88,0.25,165);
+insert into book(book_name,author_name,publisher_name,genre,ISBN,price,cost,sales_percentage,in_stock) values ('Hello World','zzf','aaa','sci','djaosdj312',18.88,8.88,0.25,188);
+insert into book(book_name,author_name,publisher_name,genre,ISBN,price,cost,sales_percentage,in_stock) values ('You Young','zzf','bbb','sci','djaosdj322',18.99,8.88,0.25,165);
 insert into book(book_name,author_name,publisher_name,genre,ISBN,price,cost,sales_percentage,in_stock) values ('Math5603','zzf','ccc','adv','djaosdj332',18.88,8.88,0.25,143);
 insert into book(book_name,author_name,publisher_name,genre,ISBN,price,cost,sales_percentage,in_stock) values ('history','qtc','ddd','sci','gadgas24321',28.88, 9.88,0.30,67);
 insert into book(book_name,author_name,publisher_name,genre,ISBN,price,cost,sales_percentage,in_stock) values ('comp3005','qtc','aaa','adv','djagregre312',58.88,28.88,0.15,99);
