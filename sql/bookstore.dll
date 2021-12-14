@@ -37,7 +37,7 @@ create table book
 	 publisher_name    	varchar(25),
 	 genre				varchar(15),
 	 ISBN				varchar(15),
-	 prices				numeric(6,2),
+	 price  			numeric(6,2),
 	 cost				numeric(6,2),
 	 sales_percentage	numeric(3,2),
 	 in_stock			numeric(4,0),
