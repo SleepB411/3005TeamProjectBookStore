@@ -1,3 +1,6 @@
+drop schema public cascade;
+create schema public;
+
 create table owner
 	(user_name		  	varchar(15),
 	 password			varchar(15),
