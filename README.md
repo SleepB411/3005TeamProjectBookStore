@@ -13,25 +13,25 @@ Download 3005TeamProject or .zip file and unzip it, in the 3005TeamProject direc
 
 modify the nodemon.json file:
 change this
-> {
->	"env": {
->        "user": "postgres",
->        "host": "localhost",
->        "database": "bookstore",
->        "password": "password",
->        "port": 5432
->	}
-> }
-to this form:
-{
-	"env": {
-        "user": <your database user>,
-        "host": "localhost",
-        "database": <your new created database name>,
-        "password": <your database password>,
-        "port": <your database port>
+	{
+		"env": {
+		"user": "postgres",
+		"host": "localhost",
+		"database": "bookstore",
+		"password": "password",
+		"port": 5432
+		}
 	}
-}
+to this form:
+	{
+		"env": {
+		"user": <your database user>,
+		"host": "localhost",
+		"database": <your new created database name>,
+		"password": <your database password>,
+		"port": <your database port>
+		}
+	}
   
 go back to the terminal you opened:
 > npm start
