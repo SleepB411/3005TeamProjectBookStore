@@ -3,7 +3,7 @@
         "user": "postgres",
         "host": "localhost",
         "database": "bookstore",
-        "password": "trickshot1",
+        "password": "password",
         "port": 5432
 	}
 }
