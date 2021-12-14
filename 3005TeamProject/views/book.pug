@@ -1,0 +1,61 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Book
+    link(rel="stylesheet" href="/book.css")
+  nav#home
+    a#nav1(href='/home') Home
+
+  h1#title #{book.book_name}
+  body
+    #main
+      #info-div
+        #info-div1
+          h2 #{book.book_name}
+          br
+          label Author:
+            span  #{book.author_name}
+          br
+          label Genre: 
+            span #{book.genre}
+          br
+          label ISBN: 
+            span #{book.isbn} 
+          br
+          label price: 
+            span #{book.price}
+          br
+          label in stock: 
+            span #{book.in_stock}
+        #checkOut
+            form#buy-form(method='post' action='/checkout/books/'+(book.id).toString())
+              label#qLabel(for='quantity') quantity:
+                input(type='number' name='quantity' min='1' max=book.in_stock step='1' value='0' required)
+              br
+              button#buyBtn(type = "submit") Buy 
+    #mobile
+      #infooS
+        #infoS
+          h2 #{book.book_name}
+          br
+          label Author:
+            span  #{book.author_name}
+          br
+          label Genre: 
+            span #{book.genre}
+          br
+          label ISBN: 
+            span #{book.isbn} 
+          br
+          label price: 
+            span #{book.price}
+          br
+          label in stock: 
+            span #{book.in_stock} 
+          
+          form#buy-form(method='post' action='/checkout/books/'+book.id)
+            label#qLabel(for='quantity') quantity:
+              input(type='number' name='rating' min='1' max=book.in_stock step='1' value='0' required)
+            br
+            button#buyBtn(type = "submit") Buy 

@@ -1,0 +1,31 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Checkout
+    link(rel="stylesheet" href="/checkout.css")
+  nav#home
+    a#nav1(href='/home') Home
+
+  body
+    #info-div
+      if (books!=null) 
+        ul#ul-books
+          each book in books 
+            .ibook
+              #book
+                a(href="/books/"+book.id) #{book.book_name}
+              #book-quantity
+                | quantity to buy: #{book.toBuy}
+
+    form#checkout-form(method='post' action='/checkout')
+      label.inputla(for="baddress") Billing address: 
+      input#input-div1.input-div(type="text" name="baddress" value=user.billing_address) 
+      br
+      label.inputla(for="address") Shipping address: 
+      input#input-div1.input-div(type="text" name="address" value=user.shipping_address) 
+      br
+      if (books == null)
+          button#buyBtn(type = "submit" disabled) Complete
+      else 
+          button#buyBtn(type = "submit") Complete

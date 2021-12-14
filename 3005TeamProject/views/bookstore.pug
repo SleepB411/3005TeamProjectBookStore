@@ -1,0 +1,65 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Bookstore
+    link(rel="stylesheet" href="bookstore.css")
+  body
+    #container2
+      div
+        h1#title Book Store
+      #rec
+        #search-div
+          #search
+            form#searchForm(action="/books" method="get")
+              input#search-box(type='text', name='searchTerm', placeholder='Type to search')
+              button#searchBtn(type = "submit") search
+          #user-div 
+          if (user!=null)
+            #user
+              a#username(href='/users/'+user.user_name ) #{user.user_name}
+              button#OutBtn.desktop
+                a(href='/logout') Logout
+              button#ckOutBtn.desktop
+                a(href='/checkout/'+user.user_name) checkout
+          else
+            #user
+              a#username(href='/') SignIn
+              button#OutBtn.desktop
+                a(href='/signup.html') SignUp
+              button#ckOutBtn.desktop(type="button", disabled)
+                | checkout
+          
+        #searchS.mobile
+          ul
+          each book in books
+            li
+                label 
+                 a(href="/books/"+book.id) #{book.book_name}
+
+          if current > 1
+          #pages
+            - let url = "/books?page=" + (current-1)
+            - if(qstring.length > 0){ url += "&" + qstring; }
+            a(href=url)#p1.page &uarr;
+              | 
+            - url = "/books?page=" + (current+1)
+            - if(qstring.length > 0){ url += "&" + qstring; }
+            a(href=url)#p2.page &darr;
+        #desktop
+          #rec-div1.rec
+            ul
+            each book in books
+              li
+                a(href="/books/"+book.id) #{book.book_name}
+                br
+            if current > 1
+              - let url = "/books?page=" + (current-1)
+              - if(qstring.length > 0){ url += "&" + qstring; }
+              a(href=url).page Previous
+                | 
+            - url = "/books?page=" + (current+1)
+            - if(qstring.length > 0){ url += "&" + qstring; }
+            a(href=url).page Next
+          
+      

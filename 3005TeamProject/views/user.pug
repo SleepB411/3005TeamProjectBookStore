@@ -1,0 +1,52 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title #{user.user_name}'s personnal page
+    link(rel="stylesheet" href="/user.css")
+  body
+    nav#home
+      a(href='/home') Home
+    .main
+      #container1
+        #part1
+          .user-div
+            #user-div1
+              if user.isOwner
+                h4#username #{user.user_name} 
+                small (Owner)
+              else
+                h4 #{user.user_name} 
+                small (Regular)
+              br
+              a(href='/logout') Logout
+            #user-div2
+            if user.isOwner
+              form(action="/users/"+user.user_name method="post")
+                input.notdisplay(name="type" value="regular")
+                button#UserAccountButton(type='submit') Back to Regular User
+            else
+              form(action="/users/"+user.user_name method="post")
+                input.notdisplay(name="type" value="owner")
+                button#UserAccountButton(type='submit') Upgrade to Owner
+
+          #manageBS
+            if user.isOwner 
+              | As an owner, you can
+              a#btn-manageBS(href='/modify.html')
+                  | Manage books
+            else
+              | You must be an owner to:
+              button#btn-disabled(type='button' disabled)
+                | Manage books
+      #container
+        .order-div
+          each order in orders 
+            li 
+              label date: #{order.order_date}
+              label order number:
+                a(href="/orders/"+(order.order_id).toString()) &nbsp &nbsp &nbsp #{order.order_id}
+
+
+          
+      

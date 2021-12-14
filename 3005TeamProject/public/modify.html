@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1">
+        <title>Manage Bookstore</title>
+        <link rel="stylesheet" href="/modify.css">  
+    </head>
+    <body >
+        <div class="main">
+            <div class= "panel" id = "panel1">
+                <div id="header">
+                    <div>
+                        <nav id="home">
+                            <a href="/home">Home</a>
+                        </nav> 
+                    </div>
+                    <div id="titleC" class="title">
+                        <h1 id="c1">AS&nbsp;<span>Owner</span>, YOU CAN :&nbsp;  &rarr;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h1>
+                    </div>
+                    <button type="button" name="button" id="to1"><a href="#panel1">Add Book</a></button>
+                    <button type="button" name="button" id="to2"><a href="#panel2">Delete Book</a></button>
+                    <button type="button" name="button" id="to3"><a href="/report">Access Report</a></button>
+                 </div>
+                <div id="container">
+                    <div id="modifyP1"class="addbook-div">
+                        <form action="modify/add" method="POST">
+                            <h2>Add a Book</h2>
+                            <label for="bookname">
+                                Book Name:
+                            </label>
+                            <input type="text" name="bookname">
+                            <br>
+                            <label for="authorname">
+                                Author Name:
+                            </label>
+                            <input type="text" name="authorname">
+                            <br>
+                            <label for="genre">
+                                Genre:
+                            </label>
+                            <input type="text" name="genre">
+                            <br>
+                            <label for="isbn">
+                                ISBN:
+                            </label>
+                            <input type="text" name="isbn">
+                            <br>
+                            <label for="price">
+                                Price:
+                            </label>
+                            <input type="text" name="price">
+                            <br>
+                            <label for="cost">
+                                Cost:
+                            </label>
+                            <input type="text" name="Cost">
+                            <br>
+                            <label for="salespercentage">
+                                Sales Percentage:
+                            </label>
+                            <input type="text" name="salespercentage">
+                            <br>
+                            <label for="instock">
+                                In Stock:
+                            </label>
+                            <input type="text" name="instock">
+                            <br>
+                            <label for="publishername">
+                                Publisher Name:
+                            </label>
+                            <input type="text" name="publishername">
+                            <br>
+                            <label for="address">
+                                Publisher Address:
+                            </label>
+                            <input type="text" name="address">
+                            <br>
+                            <label for="email">
+                                Publisher email:
+                            </label>
+                            <input type="text" name="email">
+                            <br>
+                            <label for="phonenumber">
+                                Publisher Phone Number:
+                            </label>
+                            <input type="text" name="phonenumber">
+                            <br>
+                            <label for="bankaccount">
+                                Publisher Bank Account:
+                            </label>
+                            <input type="text" name="bankaccount">
+                            <br>
+                            <button id="btn-addbook" class = "buttons" type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div class = "panel" id="panel2">
+                        <div id="modifyP2" class="deletebook-div">
+                            <form action="modify/delete" method = "POST">
+                                <h2>Delete a book </h2>
+                                <label for="bookid">
+                                    <b>Book ID: </b>
+                                </label>
+                                <input id="Title" type="text"  name="bookid" >
+                                <br>
+                                <button id="btn-deleteEntry" class = "buttons"  type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

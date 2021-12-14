@@ -1,0 +1,9 @@
+{
+	"env": {
+        "user": "postgres",
+        "host": "localhost",
+        "database": "bookstore",
+        "password": "trickshot1",
+        "port": 5432
+	}
+}

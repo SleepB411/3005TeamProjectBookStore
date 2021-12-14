@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1">
+        <title>Sign In</title>
+        <link rel="stylesheet" href="signin.css">  
+    </head>
+    <body >     
+        <div class="container">
+            <form action="/main" method="post" class="signin-f">
+                <h1>Log In Bookstore</h1>
+                <div id="inputbox">
+                    <label class="input-label" for="username" id="input-label1">User Name:</label>
+                    <input type="text" name="username" class= "input-div" id="input-div1" required>
+                    <br>
+                    <label class="input-label" for="password" id="input-label2">Password:</label>
+                    <input type="password" name="password" class="input-div" id="input-div2" required>
+                <br>
+                </div>
+                <button class = "buttons" type="submit" id="signinB" >Sign In</button>   
+            </form>
+            <form action="signup.html" method="get" class="signup-f">
+                <button class="buttons" id="signupB">Sign Up</button>
+            </form>
+        </div>    
+    </body>
+    <script>
+    </script> 
+</html>

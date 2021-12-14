@@ -1,0 +1,85 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Order
+    link(rel="stylesheet" href="/report.css")
+  body
+    .main 
+        #panel1.panel
+            #header 
+                div
+                    nav#home
+                        a(href='/home') Home
+                #titleC.title 
+                    h1  
+                button#to1(type="button", name="button")
+                    a(href="#panel1") Report1
+                button#to2(type="button", name="button")
+                    a(href="#panel2") Report2
+                button#to3(type="button", name="button")
+                    a(href="#report3-form") Report3 
+            #container 
+                #report1-div 
+                    if(report.total_sale!=null)
+                        h2 Report:
+                        p
+                            span sales: #{report.total_sale} 
+                            span expenditures: #{report.total_exp}
+                    else
+                        h2 Please choose a report to view
+                        p 1. set start and end date 
+                        p 2. set genre or author in report 2 or report 3
+                    button(onclick="closeReport()") OK
+                #modifyP1.report1-div 
+                    form#report1-form(action="/report/1", method="post")
+                        h1#title Sales and Expenditures report:
+                        label(for="startdate") Start Date:
+                        input(type="date", name="startdate") 
+                        br
+                        label(for="enddate") End Date: 
+                        input(type="date", name="enddate")
+                        br
+                        button#btn-report1(type="submit" onclick="showReport()") Report
+                        
+                #panel2.panel
+                    #modifyP2.report2-div 
+                        form#report2-form(action="/report/2", method="post")
+                            h1#title Per genre report during the period:
+                            label(for="startdate") Start Date:
+                            input(type="date", name="startdate") 
+                            br
+                            label(for="enddate") End Date: 
+                            input(type="date", name="enddate")
+                            br
+                            label(for="genre") Genre:
+                            input(type="text", name="genre")
+                            button#btn-report2(type="submit" onclick="showReport()") Report
+                        
+                #panel3.panel 
+                    #modifyP3.report3-div
+                        form#report3-form(action="/report/3", method="post")
+                            h1#title Per author report during the period:
+                            label(for="startdate") Start Date:
+                            input(type="date", name="startdate") 
+                            br
+                            label(for="enddate") End Date: 
+                            input(type="date", name="enddate")
+                            br
+                            label(for="author") Author:
+                            input(type="text", name="author")
+                            button#btn-report3(type="submit" onclick="showReport()") Report
+    script(src="/report.js")
+                
+
+    
+
+           
+        
+        
+        
+
+
+
+          
+      

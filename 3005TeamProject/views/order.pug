@@ -1,0 +1,27 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Order
+    link(rel="stylesheet" href="/order.css")
+  body
+    nav#home
+      a(href='/home') Home
+    h1#title Order ID:  #{order.order_id}
+    #info
+        label Book ID:
+          a(href="/books/"+(order.id).toString()) #{order.id}
+        br
+        label order date:
+        |  #{order.order_date}
+        br
+        label expected arrival date: 
+        | #{order.expected_date}
+        br
+        label current location: 
+        | #{order.current_location} 
+
+
+
+          
+      
