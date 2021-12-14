@@ -25,11 +25,11 @@ change this
 to this form:
 	{
 		"env": {
-		"user": <your database user>,
+		"user": your database user,
 		"host": "localhost",
-		"database": <your new created database name>,
-		"password": <your database password>,
-		"port": <your database port>
+		"database": your new created database name,
+		"password": your database password,
+		"port": your database port
 		}
 	}
   
