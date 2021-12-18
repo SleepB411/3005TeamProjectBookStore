@@ -6,9 +6,9 @@ Instructions:
 
 With node js and postgresql installed:
 
-First, create a new database using pgAdmin and using the two sql files in sql directory to initalize the database.
+First, create a new database using pgAdmin and using the two sql files in sql directory to initalize the database. And use the function.sql to create a trigger function then use trigger.sql to create a trigger.
 
-Download 3005TeamProject or .zip file and unzip it, in the 3005TeamProject directory open terminal:
+Download 3005TeamProject, in the 3005TeamProject directory open terminal:
 > npm install
 
 modify the nodemon.json file:
