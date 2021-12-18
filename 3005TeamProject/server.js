@@ -294,29 +294,7 @@ function checkOut(req,res,next){
                 share += book.toBuy * book.price *book.sales_percentage;
                 sales += book.toBuy * book.price;
                 exp += share;
-                client.query("select in_stock from book where id="+book.id, (err1, response1)=>{
-                    if(err1) throw err1
-                    if(Number(response1.rows[0].in_stock) < 10){
-                        client.query("select sum(quantity) from user_order where id ="+book.id+" and order_date < current_timestamp and order_date > current_timestamp - interval '720 hours'", (err2, response2)=>{
-                            if(err2) throw err2
-                            else{
-                                let restock = 0;
-                                if(response2.rowCount == 0){
-                                    restock = 50;
-                                }
-                                restock = Math.max(10, response2.rows[0].sum);
-                                exp += restock * book.cost;
-                                share += restock * book.cost;
-                                client.query("update book set in_stock = in_stock +"+restock+" where id ="+book.id,(err3, response3)=>{
-                                    if(err3) throw err3
-                                    else{
-                                        console.log("Email has been sent and this book has been restock");
-                                    }
-                                })
-                            }
-                        })
-                    }
-                })
+                console.log("Email has been sent and this book has been restock");
                 client.query("select * from report where date=current_timestamp and genre="+sqlV(book.genre)+" and author_name="+sqlV(book.author_name)+";", (err1, response1)=>{
                     if(err1) throw err1
                     else{
